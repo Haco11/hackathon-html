@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+
+:root {
+  --animation: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+  --dark: #141519;
+  --lightdark: #2c3541;
+  --Orange: hsl(25, 97%, 53%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+main {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.rating-card {
+  display: flex;
+  max-width: 400px;
+  max-height: 100%;
+  background-color: var(--DarkBlue);
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.thank-you-card {
+  display: flex;
+  max-width: 400px;
+  max-height: 100%;
+  background-color: var(--DarkBlue);
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: var(--LightGrey);
+  font-size: 15px;
+}
+
+.rating-card-number {
+  display: flex;
+  gap: 1rem;
+}
+
+.rating-card-number span:hover {
+  background-color: var(--Orange);
+  color: var(--animation);
+  transition: 0.5s;
+}
+
+.rating-card-number span {
+  flex: 1;
+  color: var(--LightGrey);
+  background-color: var(--lightdark);
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit {
+  background-color: var(--Orange);
+  width: 100%;
+  padding: 13px;
+  border-radius: 25px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: Bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.rating-card-number span.active {
+  background-color: var(--MediumGrey);
+  color: var(--animation);
+  transition: 0.5s;
+}
+.submit:hover {
+  background-color: var(--animation);
+  color: var(--Orange);
+  transition: 0.5s;
+}
+
+.star {
+  border-radius: 50%;
+  background-color: var(--lightdark);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result {
+  color: var(--Orange);
+  background-color: var(--lightdark);
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.Thank-img img {
+  height: 125px;
+}
+
+@media (max-width: 400px) {
+  .rating-card,
+  .thank-you-card {
+    scale: 0.8;
+  }
+}
